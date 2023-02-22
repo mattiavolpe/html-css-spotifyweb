@@ -40,17 +40,6 @@ a {
   -webkit-font-smoothing: antialiased;
 }
 
-.section_title {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  color: var(--lighter);
-}
-
-.section_subtitle {
-  margin-bottom: 20px;
-  color: var(--light);
-}
-
 .col_infos h4 {
   color: var(--lighter);
   margin-bottom: 5px;
@@ -58,15 +47,6 @@ a {
 
 .col_infos span {
   color: var(--light);
-}
-
-.img_wrapper {
-  position: relative;
-}
-
-#popular_artists .img_wrapper,
-#popular_artists .img_wrapper img {
-  border-radius: 50%;
 }
 
 #content section [class^="col_"]:hover {
@@ -190,6 +170,25 @@ a {
   padding-bottom: 10px;
 }
 
+.section_title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: var(--lighter);
+}
+
+.section_subtitle {
+  margin-bottom: 20px;
+  color: var(--light);
+}
+
+.img_wrapper {
+  position: relative;
+}
+
+.rounded {
+  border-radius: 50%;
+}
+
 /* #endregion Utilities */
 
 /* #region Debug */
@@ -236,7 +235,11 @@ aside svg path {
   padding-right: 10px;
 }
 
-.complete_logo {
+.complete_logo,
+.aside_section_name,
+#playlists,
+#aside_bottom span,
+#aside_bottom hr {
   display: none;
 }
 
@@ -244,18 +247,8 @@ aside svg path {
   margin-top: 15px;
 }
 
-.aside_section_name,
-#aside_bottom span,
-#aside_bottom hr {
-  display: none;
-}
-
 #sections li:not(li:last-child) {
   margin-bottom: 10px;
-}
-
-#playlists {
-  display: none;
 }
 
 #aside_bottom a:last-of-type {
@@ -265,7 +258,6 @@ aside svg path {
 #aside_bottom a:last-of-type svg {
   aspect-ratio: 1 / 1;
   background-color: var(--light);
-  border-radius: 50%;
 }
 
 #aside_bottom a:last-of-type svg path {
