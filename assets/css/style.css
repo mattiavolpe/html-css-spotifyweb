@@ -203,6 +203,8 @@ a {
 
 #top {
   height: calc(100vh - 90px);
+  /* TO ENSURE 100VH KEEPS IN MIND UI TOOLBARS. IF NOT SUPPORTED IT IS SIMPLY IGNORED */
+  height: calc(100svh - 90px);
 }
 
 aside {
@@ -554,6 +556,8 @@ aside svg path {
 
   #playlists_list {
     height: calc(100vh - 90px - 10px - 80px - 95px - 23px - 60px - 40px - 70px);
+    /* TO ENSURE 100VH KEEPS IN MIND UI TOOLBARS. IF NOT SUPPORTED IT IS SIMPLY IGNORED */
+    height: calc(100svh - 90px - 10px - 80px - 95px - 23px - 60px - 40px - 70px);
     overflow-y: auto;
   }
 
