@@ -54,6 +54,10 @@ a {
   justify-content: space-between;
 }
 
+.btn {
+  display: inline-block;
+}
+
 /* #endregion Utilities */
 
 /* #region Debug */
@@ -138,9 +142,18 @@ aside svg path {
   flex-grow: 1;
 }
 
-nav {
+#main_top {
+  justify-content: flex-end;
   flex-basis: 90px;
+  padding-right: 10px;
   background-color: var(--dark);
+}
+
+#main_top .btn {
+  border-radius: 20px;
+  padding: 10px 35px;
+  border: 1px solid var(--light);
+  color: var(--light);
 }
 
 #content {
@@ -149,7 +162,6 @@ nav {
 }
 
 /* #endregion Top */
-
 
 /* #region Footer */
 
@@ -261,7 +273,7 @@ nav {
 #sections li svg path,
 #playlists a,
 #new_playlist > span:first-child {
-  transition: all 0.4s;
+  transition: box-shadow 0.4s, color 0.4s, fill 0.4s, background-color 0.4s,;
 }
 
 #sections li:hover {
@@ -281,8 +293,16 @@ nav {
   background-color: var(--lighter);
 }
 
-/* #endregion Effects */
+#main_top .btn {
+  transition: color 0.4s, border-color 0.4s;
+}
 
+#main_top .btn:hover {
+  color: var(--lighter);
+  border-color: var(--lighter);
+}
+
+/* #endregion Effects */
 
 /* #region Scrollbar */
 
