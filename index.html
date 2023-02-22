@@ -218,7 +218,65 @@
     </div>
     <!-- /#top -->
 
-    <footer id="app_footer">
+    <footer id="app_footer" class="flex align_items_center justify_content_between">
+      <div id="footer_left" class="flex align_items_center">
+        <div id="current_song_cover">
+          <img src="./assets/img/sinister.jpeg" alt="Current playing song album cover">
+        </div>
+        <!-- /#current_song_cover -->
+
+        <div id="current_song_infos">
+          <a id="current_song_title" href="#">
+            Sinister
+          </a>
+          <!-- /#current_song_title -->
+
+          <a id="current_song_artist" href="#">
+            Song Artist
+          </a>
+          <!-- /#current_song_artist -->
+        </div>
+        <!-- /#current_song_infos -->
+
+        <div id="like_section">
+          <i class="fa-regular fa-heart fa-fw"></i>
+          <i class="fa-regular fa-folder fa-fw"></i>
+        </div>
+        <!-- /#like_section -->
+
+      </div>
+      <!-- /#footer_left -->
+
+      <div id="footer_center" class="flex direction_column align_items_center justify_content_center">
+        <div id="playing_commands" class="flex align_items_center justify_content_between">
+          <i class="fa-solid fa-shuffle fa-fw"></i>
+          <i class="fa-solid fa-backward-step fa-fw"></i>
+          <i class="fa-regular fa-circle-play fa-xl fa-fw"></i>
+          <i class="fa-solid fa-forward-step fa-fw"></i>
+          <i class="fa-solid fa-rotate-right fa-fw"></i>
+        </div>
+        <!-- /#playing_commands -->
+
+        <div id="playing_time" class="flex align_items_center justify_content_between">
+          <span>0.25</span>
+          <div id="total_time">
+            <div id="current_time"></div>
+          </div>
+          <span>4.35</span>
+        </div>
+        <!-- /#playing_time -->
+      </div>
+      <!-- /#footer_center -->
+
+      <div id="footer_right" class="flex align_items_center">
+        <i class="fa-solid fa-list fa-fw"></i>
+        <i class="fa-solid fa-display fa-fw"></i>
+        <i class="fa-solid fa-volume-high fa-fw"></i>
+        <div id="total_volume">
+          <div id="current_volume"></div>
+        </div>
+      </div>
+      <!-- /#footer_right -->
 
     </footer>
     <!-- /#app_footer -->
