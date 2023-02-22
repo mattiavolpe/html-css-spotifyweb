@@ -234,7 +234,7 @@ aside svg path {
 
   /* TODO fix height calculation maybe with flex */
   #playlists_list {
-    height: calc(100vh - 90px - 10px - 80px - 95px - 23px - 60px - 40px - 61px);
+    height: calc(100vh - 90px - 10px - 80px - 95px - 23px - 60px - 40px - 70px);
     overflow-y: auto;
   }
 
@@ -254,6 +254,12 @@ aside svg path {
     border-bottom: 1px solid var(--light);
   }
 
+  #user_name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--lighter);
+  }
+
 }
 
 @media screen and (min-width: 768px) {
@@ -268,12 +274,23 @@ aside svg path {
 
 /* #region Effects */
 
-#sections li,
+#sections li {
+  transition: box-shadow 0.4s;
+}
+
 #sections li a,
-#sections li svg path,
 #playlists a,
+#aside_bottom > a:first-child {
+  transition: color 0.4s;
+}
+
+#sections li svg path,
+#aside_bottom > a:first-child svg path {
+  transition: fill 0.4s;
+}
+
 #new_playlist > span:first-child {
-  transition: box-shadow 0.4s, color 0.4s, fill 0.4s, background-color 0.4s,;
+  transition: background-color 0.4s;
 }
 
 #sections li:hover {
@@ -281,11 +298,13 @@ aside svg path {
 }
 
 #sections li:hover a,
-#playlists a:hover {
+#playlists a:hover,
+#aside_bottom > a:first-child:hover {
   color: var(--lighter);
 }
 
-#sections li:hover svg path {
+#sections li:hover svg path,
+#aside_bottom > a:first-child:hover svg path {
   fill: var(--lighter);
 }
 
