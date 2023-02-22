@@ -42,6 +42,10 @@ a {
   display: flex;
 }
 
+.wrap {
+  flex-wrap: wrap;
+}
+
 .direction_column {
   flex-direction: column;
 }
@@ -182,15 +186,27 @@ aside svg path {
   padding-left: 10px;
 }
 
+#footer_center {
+  padding-left: 3px;
+  padding-right: 3px;
+  color: var(--lighter);
+}
+
 #footer_right {
+  justify-content: flex-end;
   padding-right: 10px;
+  color: var(--lighter);
 }
 
 #current_song_cover {
+  flex-shrink: 0;
   width: 30px;
   aspect-ratio: 1 / 1;
-  margin-right: 10px;
   transition: width 0.4s;
+}
+
+#current_song_infos {
+  margin: 0 5px;
 }
 
 #current_song_infos a {
@@ -208,18 +224,17 @@ aside svg path {
 }
 
 #like_section {
-  margin-left: 10px;
   color: var(--light);
 }
 
 #playing_commands {
-  color: var(--lighter);
   margin-bottom: 15px;
 }
 
 #playing_commands > i:nth-child(even),
 #footer_right > *:nth-child(even) {
-  margin: 0 5px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 #playing_time {
@@ -228,12 +243,11 @@ aside svg path {
 
 #playing_time > span {
   font-size: 0.875rem;
-  color: var(--lighter);
 }
 
-#footer_right {
-  justify-content: flex-end;
-  color: var(--lighter);
+#footer_right > * {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 #total_time,
@@ -242,11 +256,13 @@ aside svg path {
   height: 5px;
   background-color: var(--light);
   border-radius: 5px;
-  margin: 0 10px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 #footer_right #total_volume {
-  max-width: 120px;
+  min-width: 60px;
+  max-width: 240px;
   margin-right: 0;
 }
 
