@@ -1,0 +1,35 @@
+/* #region Common */
+
+:root {
+  --darker: #000000;
+  --dark: #080b12;
+  --medium: #141922;
+  --light: #a3a3a3;
+  --lighter: #ffffff;
+  --accent: #adff2f;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Circular Std', sans-serif;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* #endregion Common */
