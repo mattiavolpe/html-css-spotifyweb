@@ -59,7 +59,7 @@ a {
 /* #region Debug */
 
 .debug * {
-  outline: 1px solid limegreen;
+  /* outline: 1px solid limegreen; */
 }
 
 /* #endregion Debug */
@@ -90,7 +90,10 @@ aside svg path {
 
 .logo_wrapper,
 #sections li,
-#aside_bottom {
+#aside_bottom,
+#playlists h3,
+#new_playlist,
+#playlists_list > * {
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -111,6 +114,10 @@ aside svg path {
 
 #sections li:not(li:last-child) {
   margin-bottom: 10px;
+}
+
+#playlists {
+  display: none;
 }
 
 #aside_bottom a:last-of-type {
@@ -188,6 +195,46 @@ nav {
     display: block;
   }
 
+  #playlists {
+    display: block;
+  }
+
+  #playlists h3 {
+    margin-top: 30px;
+    color: var(--lighter);
+  }
+
+  #new_playlist {
+    margin-top: 15px;
+    margin-bottom: 25px;
+  }
+
+  #new_playlist span:first-child {
+    width: 30px;
+    aspect-ratio: 1 / 1;
+    text-align: center;
+    line-height: 30px;
+    margin-right: 10px;
+    font-size: 2.5rem;
+    background-color: var(--light);
+    color: var(--darker);
+  }
+
+  /* TODO fix height calculation maybe with flex */
+  #playlists_list {
+    height: calc(100vh - 90px - 10px - 80px - 95px - 23px - 60px - 40px - 61px);
+    overflow-y: auto;
+  }
+
+  #playlists_list > li:nth-child(even) {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  #playlists_list > li:last-child {
+    margin-bottom: 25px
+  }
+
   #aside_bottom hr {
     margin-top: 10px;
     border-width: 1px;
@@ -206,3 +253,56 @@ nav {
 }
 
 /* #endregion Responsive */
+
+/* #region Effects */
+
+#sections li,
+#sections li a,
+#sections li svg path,
+#playlists a,
+#new_playlist > span:first-child {
+  transition: all 0.4s;
+}
+
+#sections li:hover {
+  box-shadow: inset 3px 0 0 0 var(--accent);
+}
+
+#sections li:hover a,
+#playlists a:hover {
+  color: var(--lighter);
+}
+
+#sections li:hover svg path {
+  fill: var(--lighter);
+}
+
+#new_playlist:hover > span:first-child {
+  background-color: var(--lighter);
+}
+
+/* #endregion Effects */
+
+
+/* #region Scrollbar */
+
+#playlists_list::-webkit-scrollbar {
+  width: 10px;
+}
+
+#playlists_list::-webkit-scrollbar-thumb {
+  background-color: var(--light-dark);
+  border-radius: 10px;
+}
+
+#playlists_list::-webkit-scrollbar-thumb:hover {
+  background-color: var(--light);
+  border-radius: 10px;
+}
+
+#playlists_list::-webkit-scrollbar-track {
+  background-color: var(--dark);
+  border-radius: 10px;
+}
+
+/* #endregion Scrollbar */
