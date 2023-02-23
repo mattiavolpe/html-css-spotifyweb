@@ -374,6 +374,8 @@ aside svg path {
 #app_footer {
   height: 90px;
   background-color: var(--light-dark);
+  position: relative;
+  z-index: 2;
 }
 
 #app_footer > * {
