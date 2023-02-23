@@ -73,6 +73,39 @@ a {
   border-radius: 50%;
 }
 
+/* #region EXPERIMENTAL TOGGLE SECTION */
+
+.expand_toggle_container {
+  align-items: baseline;
+}
+
+.expand_toggle_container label {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  color: var(--light);
+  cursor: pointer;
+}
+
+.expand_toggle_container input[type="checkbox"] {
+  display: none;
+}
+
+/* ADDED THE "HAS" SO, IF NOT SUPPORTED, THE LABEL WILL NEVER BE SHOWN SINCE THE RULE WILL NOT BE APPLIED */
+.expand_toggle_container:has(input) label::after {
+  content: 'EXPAND';
+}
+
+/* "HAS" WORKING IN MOST BROWSERS BUT STILL NATIVELY UNSUPPORTED IN FIREFOX */
+.expand_toggle_container:has(input:checked) label::after {
+  content: 'COLLAPSE';
+}
+
+.expand_toggle_container:has(input:checked) + .flex {
+  flex-wrap: wrap;
+}
+
+/* #endregion EXPERIMENTAL TOGGLE SECTION */
+
 /* #endregion Common */
 
 /* #region Utilities */
