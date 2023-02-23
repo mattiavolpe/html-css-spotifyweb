@@ -590,9 +590,10 @@ aside svg path {
   }
 
   #playlists_list {
-    height: calc(100vh - 90px - 10px - 80px - 95px - 23px - 60px - 40px - 70px);
-    /* TO ENSURE 100VH KEEPS IN MIND UI TOOLBARS. IF NOT SUPPORTED IT IS SIMPLY IGNORED */
-    height: calc(100svh - 90px - 10px - 80px - 95px - 23px - 60px - 40px - 70px);
+    /* HEIGHTS TO SUBTRACT: logo.wrapper - #sections - aside h3 - #new_playlist - #aside_bottom - #app_footer - aside padding */
+    height: calc(100vh - 485px);
+    /* USED SVH TO ENSURE 100VH KEEPS IN MIND UI TOOLBARS. IF NOT SUPPORTED IT IS SIMPLY IGNORED */
+    height: calc(100svh - 485px);
     overflow-y: auto;
   }
 
@@ -737,6 +738,8 @@ aside svg path {
 /* #region Effects */
 
 #sections li {
+  text-transform: uppercase;
+  font-size: 1.25rem;
   transition: box-shadow 0.4s;
 }
 
@@ -756,7 +759,8 @@ aside svg path {
   transition: background-color 0.4s;
 }
 
-#sections li:first-of-type {
+#sections li:first-of-type,
+#sections li:hover {
   box-shadow: inset 3px 0 0 0 var(--accent);
 }
 
